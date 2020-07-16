@@ -22,7 +22,6 @@ void main()
 	A_out.Output_file1(A[1], 20.0, 5);
 	A_out.file << "¶þÎ¬" << endl;
 	A_out.Output_file2(A[0], 5, 5);
-	A_out.Close();
 	A_out.~Ofstream_me();
 	//delete &A_out;
 	system("pause");

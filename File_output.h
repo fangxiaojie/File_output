@@ -34,7 +34,7 @@ public:
 	void Output_file2(double *p, int size1, int size2);//size1 行  size2 列  行数要正确否者容易错位 *p（A[][]）用A[]表示 
 	//void Output_file2(double *p, int size1, int size2, int dat);//dat 下一行数据  size1 行  size2 列 
 	void Updater_file();//清空文件里的数据
-	void Close();//关闭文件
+	//void Close();//关闭文件写在析构函数中
 	//string date_str;
 	//double date_file;
 	~Ofstream_me();//需要调用	

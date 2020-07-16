@@ -134,14 +134,15 @@ void Ofstream_me::Output_file2(double *p, int size1, int size2)//ÕâÀïµÄĞĞÊı±ØĞëÕ
 //	Output_file2(p,size1,size2);
 //}
 
-void Ofstream_me::Close()
-{
-	if (control == 0)
-	{
-		file << "];";
-	}
-	file.close();
-}
+//ÓÃºóÃæµÄÎö¹¹º¯Êı´úÌæ
+//void Ofstream_me::Close()	
+//{
+//	if (control == 0)
+//	{
+//		file << "];";
+//	}
+//	file.close();
+//}
 
 void Ofstream_me::Updater_file()
 {
@@ -159,5 +160,10 @@ void Ofstream_me::Updater_file()
 
 Ofstream_me::~Ofstream_me()
 {
-	cout << "delete " << file_name;
+	if (control == 0)
+	{
+		file << "];";
+	}
+	file.close();
+	cout << "delete " << file_name<<endl;
 }
