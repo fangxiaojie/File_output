@@ -165,5 +165,6 @@ Ofstream_me::~Ofstream_me()
 		file << "];";
 	}
 	file.close();
+	file.clear();
 	cout << "delete " << file_name<<endl;
 }
