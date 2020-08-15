@@ -4,10 +4,10 @@
 using namespace std;
 
 //a 0ÎÄ¼şÎ²×·¼Ó ÆäËûÇå¿ÕÔÙĞ´   b 0 .mÎÄ¼ş ÆäËû.txtÎÄ¼ş
-Ofstream_me::Ofstream_me(string filename,int a,int b)
+Ofstream_me::Ofstream_me(string filename, int and_0, int mfile_0) 
 {
-	control = b;
-	control1 = a;
+	control = mfile_0;
+	control1 = and_0;
 	file_name = filename;
 	name = filename+"_out";
 	Open_file(1);
@@ -38,17 +38,6 @@ void Ofstream_me::Open_file(int II)
 	if (control == 0)
 		file << name << "= [";
 }
-
-//Ğ´ÈëÒ»¸öÊı¾İ
-void Ofstream_me::Output_file(string datestr, double date_date)
-{
-	file << datestr<<":" << date_date << endl;
-}
-//void Ofstream_me::Output_file(double date_date)
-//{
-//	file << date_date << endl;
-//}
-
 
 //Ğ´Ò»¸öÒ»Î¬Êı×éĞ´Íêºó»»ĞĞ
 void Ofstream_me::Output_file1(double *p, int size)
@@ -86,30 +75,6 @@ void Ofstream_me::Output_file1(double *p, double *inital, int size)
 	file.unsetf(ios::scientific);
 }
 
-//void Ofstream_me::Output_file1(double *p, int size, string datestr)
-//{
-//	file << datestr << ":" << endl;
-//	Output_file1(p, size);
-//}
-
-//void Ofstream_me::Output_file1(double *p, int size, int dat)
-//{
-//	file << dat << endl;
-//	Output_file1(p, size);
-//}
-//void Ofstream_me::Output_file1(double *p, double inital, int size, int dat)
-//{
-//	file << dat << endl;
-//	Output_file1(p,  inital, size);
-//	//Output_file1(p, size);
-//}
-//void Ofstream_me::Output_file1(double *p, double *inital, int size, int dat)
-//{
-//	file << dat << endl;
-//	Output_file1(p, inital, size);
-//	//Output_file1(p, size);
-//}
-//
 
 //ÔÚÎÄ¼şÖĞĞ´Ò»¸ö¶şÎ¬Êı×é
 void Ofstream_me::Output_file2(double *p, int size1, int size2)//ÕâÀïµÄĞĞÊı±ØĞëÕıÈ··ñÔò´íÎ»
@@ -128,21 +93,7 @@ void Ofstream_me::Output_file2(double *p, int size1, int size2)//ÕâÀïµÄĞĞÊı±ØĞëÕ
 	}
 	file.unsetf(ios::scientific);
 }
-//void Ofstream_me::Output_file2(double *p, int size1, int size2, int dat)
-//{
-//	file << dat << endl;
-//	Output_file2(p,size1,size2);
-//}
 
-//ÓÃºóÃæµÄÎö¹¹º¯Êı´úÌæ
-//void Ofstream_me::Close()	
-//{
-//	if (control == 0)
-//	{
-//		file << "];";
-//	}
-//	file.close();
-//}
 
 void Ofstream_me::Updater_file()
 {
@@ -166,5 +117,5 @@ Ofstream_me::~Ofstream_me()
 	}
 	file.close();
 	file.clear();
-	cout << "delete " << file_name<<endl;
+	cout << "close " << file_name<<endl;
 }

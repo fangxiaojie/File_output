@@ -15,14 +15,13 @@ void main()
 	{
 		A[i][j] = rand() % 5;
 	}
-	A_out.Output_file("A", 1.1);
+	A_out.file<<"A: 1.1";
 	A_out.file << "Ò»Î¬" << endl;
 	A_out.Output_file1(A[1], 5);
 	A_out.Output_file1(A[1], A[1], 5);
 	A_out.Output_file1(A[1], 20.0, 5);
 	A_out.file << "¶þÎ¬" << endl;
 	A_out.Output_file2(A[0], 5, 5);
-	A_out.~Ofstream_me();
-	//delete &A_out;
+
 	system("pause");
 }
