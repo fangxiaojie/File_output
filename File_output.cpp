@@ -77,7 +77,7 @@ void Ofstream_me::Output_file1(double *p, double *inital, int size)
 
 
 //ÔÚÎÄ¼şÖĞĞ´Ò»¸ö¶şÎ¬Êı×é
-void Ofstream_me::Output_file2(double *p, int size1, int size2)//ÕâÀïµÄĞĞÊı±ØĞëÕıÈ··ñÔò´íÎ»
+void Ofstream_me::Output_file2(double *p, int size1, int size2)//ÕâÀïµÄĞĞÊı±ØĞëÕıÈ··ñÔò´íÎ» ÊäÈëÎªÊı×éµÄÊ×¸öÎ»ÖÃ
 {
 	//ÕâÀïsize1±íÊ¾ĞĞ£¬size2±íÊ¾ÁĞ¡£
 	size1_file = size1;
@@ -87,7 +87,7 @@ void Ofstream_me::Output_file2(double *p, int size1, int size2)//ÕâÀïµÄĞĞÊı±ØĞëÕ
 	{
 		for (int i = 0; i < size2_file; i++)
 		{
-			file << *(p + i+j*size1) << ' ';
+			file << *(p + i + j*size2) << ' ';
 		}
 		file << endl;
 	}
